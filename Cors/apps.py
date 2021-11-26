@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AvndAppConfig(AppConfig):
+class CorsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'AVND_app'
+    name = 'Cors'

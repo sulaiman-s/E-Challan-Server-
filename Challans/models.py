@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
@@ -16,22 +15,3 @@ class Challan(models.Model):
     challan_time = models.DateTimeField(auto_now=True)
     challan_location = models.TextField()
     challan_status = models.CharField(choices=status_choices, max_length=255)
-
-
-class Queries(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    mesage = models.TextField(max_length=300)
-
-
-class Uploads(models.Model):
-    vehicle_number = models.CharField(max_length=100)
-    challan_image = models.ImageField(upload_to="uploaded/%Y/%m", blank=False)
-
-
-class MLImages(models.Model):
-    ml_image = models.ImageField(upload_to="mlImages/%Y/%m", blank=False)
-
-
-class User(AbstractUser):
-    email = models.EmailField(unique=True)

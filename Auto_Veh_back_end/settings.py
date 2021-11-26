@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AVND_app'
+    'Challans',
+    'Cors',
+    'Queries'
 ]
 
 MIDDLEWARE = [
@@ -142,4 +144,4 @@ MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'AVND_app.User'
+AUTH_USER_MODEL = 'Cors.User'

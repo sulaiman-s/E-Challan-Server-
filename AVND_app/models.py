@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.fields import BLANK_CHOICE_DASH, _ChoiceNamedGroup
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
@@ -26,4 +26,12 @@ class Queries(models.Model):
 
 class Uploads(models.Model):
     vehicle_number = models.CharField(max_length=100)
-    challan_image = models.ImageField(upload_to="uploaded/%Y/%m", blank=True)
+    challan_image = models.ImageField(upload_to="uploaded/%Y/%m", blank=False)
+
+
+class MLImages(models.Model):
+    ml_image = models.ImageField(upload_to="mlImages/%Y/%m", blank=False)
+
+
+class User(AbstractUser):
+    email = models.EmailField(unique=True)

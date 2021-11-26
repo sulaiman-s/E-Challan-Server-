@@ -8,10 +8,16 @@ class Queries(models.Model):
     email = models.EmailField()
     mesage = models.TextField(max_length=300)
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Uploads(models.Model):
     vehicle_number = models.CharField(max_length=100)
     challan_image = models.ImageField(upload_to="uploaded/%Y/%m", blank=False)
+
+    def __str__(self) -> str:
+        return self.vehicle_number
 
 
 class MLImages(models.Model):

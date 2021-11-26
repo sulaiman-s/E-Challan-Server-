@@ -22,7 +22,7 @@ admin.site.site_header = "Challans With ML"
 admin.site.index_title = "Admin"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -15,3 +15,6 @@ class Challan(models.Model):
     challan_time = models.DateTimeField(auto_now=True)
     challan_location = models.TextField()
     challan_status = models.CharField(choices=status_choices, max_length=255)
+
+    def __str__(self) -> str:
+        return self.challan_no, self.vehicle_number

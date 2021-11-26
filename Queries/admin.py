@@ -3,5 +3,11 @@ from . import models
 # Register your models here.
 
 
-admin.site.register(models.Queries)
-admin.site.register(models.Uploads)
+@admin.register(models.Queries)
+class QuereyAdmin(admin.ModelAdmin):
+    list_display = ["name", "email", "mesage"]
+
+
+@admin.register(models.Uploads)
+class UploadAdmin(admin.ModelAdmin):
+    list_display = ["vehicle_number", "challan_image"]

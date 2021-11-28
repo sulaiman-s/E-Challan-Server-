@@ -6,6 +6,6 @@ from .models import Challan
 
 @admin.register(Challan)
 class ChallanAdmin(admin.ModelAdmin):
-    list_display = ['challan_no', "vehicle_number", "vehicle_type", "challan_amount",
+    list_display = ["vehicle_number", "vehicle_type", "challan_amount",
                     "challan_time", "challan_location", "challan_status"]
     list_editable = ['challan_status']

@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 pillow = "*"
 mssql-django = "*"
+djangorestframework = "*"
 
 [dev-packages]
 

@@ -23,6 +23,7 @@ admin.site.index_title = "Admin"
 
 urlpatterns = [
     path('challans/', include("Challans.urls")),
+    path('cw/', include("Queries.urls")),
     path('', admin.site.urls),
 ]
 

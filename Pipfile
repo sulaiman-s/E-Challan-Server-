@@ -8,6 +8,8 @@ django = "*"
 pillow = "*"
 mssql-django = "*"
 djangorestframework = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 

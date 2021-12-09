@@ -26,6 +26,7 @@ urlpatterns = [
     path('cw/', include("Queries.urls")),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
+    path('user/', include("Cors.urls")),
     path('', admin.site.urls),
 ]
 

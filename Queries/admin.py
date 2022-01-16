@@ -11,3 +11,4 @@ class QuereyAdmin(admin.ModelAdmin):
 @admin.register(models.Uploads)
 class UploadAdmin(admin.ModelAdmin):
     list_display = ["vehicle_number", "challan_image"]
+    list_editable = ["challan_image"]

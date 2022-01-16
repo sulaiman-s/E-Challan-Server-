@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
+# Quick-start development settin    gs - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-zqv7^$1fgk^n@f&&3l@-s@dc020l$#n845adt2^t@ye=i-#ef+
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.2.105'
+    '192.168.2.104',
+    '192.168.56.1',
+    '127.0.0.1'
 ]
 
 
@@ -43,19 +45,22 @@ INSTALLED_APPS = [
     'Challans',
     'djoser',
     'Cors',
-    'Queries'
+    'Queries',
+    'django_cleanup.apps.CleanupConfig'
+    # 'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+# CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'Auto_Veh_back_end.urls'
 
 TEMPLATES = [
@@ -103,7 +108,7 @@ DATABASES = {
         'NAME': 'AVND_DB',
         'USER': '',
         'PASSWORD': '',
-        'HOST': 'SULAIMAN',
+        'HOST': 'MYTH',
         'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',

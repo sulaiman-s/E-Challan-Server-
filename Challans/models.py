@@ -4,16 +4,16 @@ from django.db import models
 
 
 class Challan(models.Model):
-    challan_choices = [("Bi", "Bike"), ("Ca", "Car"),
-                       ("Tr", "Truck"), ("Bu", "Bus")]
-    status_choices = [("P", "Paid"), ("NP", "Not Paid")]
+    challan_choices = [("Bike", "Bike"), ("Car", "Car"),
+                       ("Truck", "Truck"), ("Bus", "Bus")]
+    status_choices = [("Paid", "Paid"), ("NotPaid", "Not Paid")]
     vehicle_number = models.CharField(unique=True, max_length=255)
     vehicle_type = models.CharField(
         choices=challan_choices, default="Bike", max_length=255)
     challan_amount = models.CharField(max_length=255)
     challan_time = models.DateTimeField(auto_now=True)
     challan_location = models.TextField()
-    challan_status = models.CharField(choices=status_choices, max_length=255)
+    challan_status = models.CharField(choices=status_choices,default="NotPaid", max_length=255)
 
     def __str__(self) -> str:
         return self.vehicle_number

@@ -1,5 +1,6 @@
 from django.contrib import admin
 from . import models
+from django.utils.html import format_html
 # Register your models here.
 
 
@@ -10,5 +11,8 @@ class QuereyAdmin(admin.ModelAdmin):
 
 @admin.register(models.Uploads)
 class UploadAdmin(admin.ModelAdmin):
-    list_display = ["vehicle_number", "challan_image"]
-    list_editable = ["challan_image"]
+    list_display = ["vehicle_number", "Reciept_Image"]
+    def Reciept_Image(self,obj):
+        return format_html('<img src="{}" style="width: 100px; height:100px;" />'.format(obj.challan_image.url))
+    Reciept_Image.allow_tags=True
+    

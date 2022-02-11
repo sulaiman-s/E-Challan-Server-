@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-zqv7^$1fgk^n@f&&3l@-s@dc020l$#n845adt2^t@ye=i-#ef+
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.2.105',
+    '192.168.43.169',
+    '192.168.2.102',
     '192.168.56.1',
     '127.0.0.1'
 ]
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'djoser',
     'Cors',
     'Queries',
+    'AdminAlert',
     'django_cleanup.apps.CleanupConfig'
     # 'corsheaders'
 ]

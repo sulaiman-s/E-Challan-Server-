@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from AdminAlert.models import AdminAlerts
+from AdminAlert.models import AlertImage, AlertMessage
 
 # Register your models here.
 
-@admin.register(AdminAlerts)
-class AlertsAdmin(admin.ModelAdmin):
-    list_display=['Alert_Message','Alert_image']
+@admin.register(AlertImage)
+class AdminAlertImage(admin.ModelAdmin):
+    list_display=['Alert_image']
 
     def Alert_image(self,obj):
         if obj.Alert_Image.url:
@@ -16,3 +16,6 @@ class AlertsAdmin(admin.ModelAdmin):
             
     Alert_image.allow_tags=True
     
+@admin.register(AlertMessage)
+class AdminAlertMessage(admin.ModelAdmin):
+    list_display=['Alert_Message']

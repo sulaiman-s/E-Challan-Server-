@@ -1,18 +1,29 @@
 from dataclasses import field
 from django.shortcuts import render
-from AdminAlert.models import AdminAlerts
+from AdminAlert.models import  AlertImage, AlertMessage
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import serializers
 # Create your views here.
 
-class AlertsSerializers(serializers.ModelSerializer):
+class AlertsImageSerializers(serializers.ModelSerializer):
     class Meta:
-        model=AdminAlerts
-        fields=['Alert_Message','Alert_Image']
+        model=AlertImage
+        fields=['Alert_Image']
 
-class AlertsView(APIView):
+class AlertsMessageSerializers(serializers.ModelSerializer):
+    class Meta:
+        model=AlertMessage
+        fields=['Alert_Message']
+
+class AlertsImageView(APIView):
     def get(self,request):
-        allAlerts=AdminAlerts.objects.last()
-        alertserial=AlertsSerializers(allAlerts)
+        allAlerts=AlertImage.objects.last()
+        alertserial=AlertsImageSerializers(allAlerts)
+        return Response(alertserial.data)
+
+class AlertsMessageView(APIView):
+    def get(self,request):
+        allAlerts=AlertMessage.objects.last()
+        alertserial=AlertsMessageSerializers(allAlerts)
         return Response(alertserial.data)

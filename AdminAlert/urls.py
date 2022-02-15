@@ -1,7 +1,8 @@
 from django.urls import path
 
-from AdminAlert.views import AlertsView
+from AdminAlert.views import AlertsImageView,AlertsMessageView
 
 urlpatterns=[
-    path('alert/',AlertsView.as_view())
+    path('images/',AlertsImageView.as_view()),
+    path('msgs/',AlertsMessageView.as_view())
 ]

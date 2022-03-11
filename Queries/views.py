@@ -58,7 +58,18 @@ class MLImageView(APIView):
         return Response(get_serialized_images.data)
 
     def post(self, request):
-        new_image = MLImagesSerializer(data=request.data)
-        new_image.is_valid(raise_exception=True)
-        new_image.save()
+        # new_image = MLImagesSerializer(data=request.data)
+        # new_image.is_valid(raise_exception=True)
+        # new_image.save()
+        image_file = request.FILES["ml_image"]
+        image_bytes = image_file.read()
+        import io
+        from PIL import Image
+        import cv2
+        import matplotlib.pyplot as plt
+
+        img = Image.open(io.BytesIO(image_bytes))
+
+        # img=cv2.imread()
+
         return Response("will create a model to return vehicle number")

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-zqv7^$1fgk^n@f&&3l@-s@dc020l$#n845adt2^t@ye=i-#ef+
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.2.101',
+    '192.168.2.103',
     '127.0.0.1'
 ]
 
@@ -88,6 +89,17 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),
 }
+
+# DJOSER = {
+#     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+# }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sulaimanfarooqi526@gmail.com'
+EMAIL_HOST_PASSWORD = 'tekjprrcebijvsbi'
 
 WSGI_APPLICATION = 'Auto_Veh_back_end.wsgi.application'
 
@@ -162,5 +174,4 @@ MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 AUTH_USER_MODEL = 'Cors.User'

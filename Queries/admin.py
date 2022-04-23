@@ -12,6 +12,7 @@ class QuereyAdmin(admin.ModelAdmin):
 @admin.register(models.Uploads)
 class UploadAdmin(admin.ModelAdmin):
     list_display = ["vehicle_number", "Reciept_Image"]
+    search_fields = ["vehicle_number", "Reciept_Image"]
 
     def Reciept_Image(self, obj):
         return format_html('<img src="{}" style="width: 100px; height:100px;" />'.format(obj.challan_image.url))

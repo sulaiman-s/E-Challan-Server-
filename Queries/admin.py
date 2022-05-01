@@ -17,12 +17,3 @@ class UploadAdmin(admin.ModelAdmin):
     def Reciept_Image(self, obj):
         return format_html('<img src="{}" style="width: 100px; height:100px;" />'.format(obj.challan_image.url))
     Reciept_Image.allow_tags = True
-
-
-@admin.register(models.MLImages)
-class MLAdmin(admin.ModelAdmin):
-    list_display = ["Ml_image"]
-
-    def Ml_image(self, obj):
-        return format_html('<img src="{}" style="width: 100px; height:100px;" />'.format(obj.ml_image.url))
-    Ml_image.allow_tags = True

@@ -1,0 +1,13 @@
+pillow
+Django
+django-cleanup
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+djoser
+mssql-django
+gunicorn
+whitenoise
+dj-database-url
+psycopg2
+

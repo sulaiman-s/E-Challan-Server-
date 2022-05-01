@@ -25,9 +25,9 @@ urlpatterns = [
     path('challans/', include("Challans.urls")),
     path('alerts/', include("AdminAlert.urls")),
     path('cw/', include("Queries.urls")),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.jwt')),
     path('user/', include("Cors.urls")),
+    path('auth/', include('djoser.urls.jwt')),
+    path('auth/', include('djoser.urls')),
 
 ]
 

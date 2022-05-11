@@ -28,6 +28,7 @@ urlpatterns = [
     path('user/', include("Cors.urls")),
     path('auth/', include('djoser.urls.jwt')),
     path('auth/', include('djoser.urls')),
+    path('history/',include('history.urls'))
 
 ]
 

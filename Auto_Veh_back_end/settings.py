@@ -59,7 +59,8 @@ INSTALLED_APPS = [
     'Cors',
     'Queries',
     'AdminAlert',
-    'django_cleanup.apps.CleanupConfig'
+    'django_cleanup.apps.CleanupConfig',
+    'history'
     # 'corsheaders'
 ]
 

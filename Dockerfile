@@ -27,7 +27,10 @@ ADD ./requirements.txt /app/requirements.txt
 RUN pip install  --no-cache-dir -r requirements.txt
 COPY . .
 
+RUN pip install cloudinary django-cloudinary-storage
+
 RUN python manage.py collectstatic --noinput
+
 
 # RUN addgroup app && adduser -S -G app app 
 # USER app

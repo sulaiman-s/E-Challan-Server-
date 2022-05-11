@@ -10,6 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 from pathlib import Path
 from datetime import timedelta
 import os
@@ -29,11 +33,11 @@ KEY = 'django-insecure-zqv7^$1fgk^n@f&&3l@-s@dc020l$#n845adt2^t@ye=i-#ef+'
 
 SECRET_KEY = os.environ.get('SECRET_KEY', default=KEY)
 
-DEBUG = int(os.environ.get('DEBUG', default=0))
+DEBUG = int(os.environ.get('DEBUG', default=1))
 
 ALLOWED_HOSTS = [
     'avnd.herokuapp.com',
-    '192.168.2.103',
+    '192.168.2.106',
     '192.168.8.101',
     '127.0.0.1',
 ]
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
     'rest_framework',
     'Challans',
     'djoser',
@@ -181,6 +186,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "sulaimancloud",
+    "API_KEY": "886117794966164",
+    "API_SECRET": "qXcVSYKLDXFzU6REnTlm5g7V-YU"
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -188,8 +198,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 MEDIA_URL = '/media/'

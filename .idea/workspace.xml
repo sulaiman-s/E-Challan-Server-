@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ae3d2b4-8ebf-499f-8827-10e53b0110bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/history/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Auto_Veh_back_end.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Auto_Veh_back_end.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Veh_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Veh_back_end/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Veh_back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Veh_back_end/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cors/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cors/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cors/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cors/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,8 @@
       <option name="presentableId" value="Default" />
       <updated>1635534556105</updated>
       <workItem from="1645627618399" duration="1649000" />
-      <workItem from="1652264081812" duration="6513000" />
+      <workItem from="1652264081812" duration="6670000" />
+      <workItem from="1652883497193" duration="10540000" />
     </task>
     <servers />
   </component>

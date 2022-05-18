@@ -37,7 +37,7 @@ DEBUG = int(os.environ.get('DEBUG', default=1))
 
 ALLOWED_HOSTS = [
     'avnd.herokuapp.com',
-    '192.168.2.106',
+    '192.168.2.102',
     '192.168.8.101',
     '127.0.0.1',
 ]

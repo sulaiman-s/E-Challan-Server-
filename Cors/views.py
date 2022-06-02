@@ -4,6 +4,14 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework.views import APIView
 from .models import ProfilePic
+from django.shortcuts import render
+
+
+def privacyPolicy(request):
+    return  render(request,"privacyPolicy.html")
+
+
+
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):

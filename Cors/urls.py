@@ -2,7 +2,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from .views import MyTokenObtainPairView
 from django.contrib import admin
-from .views import Profiles,ProfilesSpec
+from .views import Profiles,ProfilesSpec,privacyPolicy
 
 
 urlpatterns = [
@@ -21,6 +21,6 @@ urlpatterns = [
     path('profile/', Profiles.as_view()),
     path('profile/uid/<str:id>',ProfilesSpec.as_view()),
     path('profile/<str:name>',ProfilesSpec.as_view()),
-
+    path('privacy/',privacyPolicy)
 
 ]

@@ -12,8 +12,8 @@ from .models import Challan
 class ChallanSerializer(serializers.ModelSerializer):
     class Meta:
         model = Challan
-        fields = ['challan_id', 'vehicle_number', 'vehicle_type', 'challan_amount',
-                  'challan_location', 'challan_status']
+        fields = ['challan_id', 'vehicle_number', 'vehicle_type', 'violation_type', 'challan_amount',
+                  'challan_location', 'challan_status', 'challan_time']
 
 
 class ChallanView(APIView):

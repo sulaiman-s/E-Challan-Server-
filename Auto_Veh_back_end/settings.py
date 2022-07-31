@@ -37,9 +37,11 @@ DEBUG = int(os.environ.get('DEBUG', default=1))
 
 ALLOWED_HOSTS = [
     'avnd.herokuapp.com',
-    '192.168.2.102',
-    '192.168.8.101',
+    '172.20.10.3',
+    '192.168.43.169',
+    '192.168.56.1',
     '127.0.0.1',
+    '192.168.2.104'
 ]
 
 
@@ -179,7 +181,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Karachi'
 
 USE_I18N = True
 
